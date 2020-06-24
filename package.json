@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-watch ./src/index.js"
+    "start": "yarn clean && babel-watch ./src/index.js",
+    "clean": "del /f/q/s \"./node_modules/.cache/babel-loader\""
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
