@@ -1,4 +1,10 @@
-import { getBooks, getBookById, saveBook, removeBook } from './model';
+import {
+  getBooks,
+  getBookById,
+  saveBook,
+  removeBook,
+  updateBook
+} from './model';
 
 export const resolvers = {
   Query: {
@@ -13,6 +19,9 @@ export const resolvers = {
     },
     removeBook: (_, { id }) => {
       return removeBook(id);
+    },
+    updateBook: (_, { id, book }) => {
+      return updateBook(id, book);
     }
   }
 };
