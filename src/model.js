@@ -46,3 +46,9 @@ export const saveBook = (book) => {
 
   return { id, ...savedBook };
 };
+
+export const removeBook = (id) => {
+  const expectedBook = booksBD.get(id);
+  booksBD.delete(id);
+  return { id, ...expectedBook };
+};
